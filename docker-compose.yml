@@ -1,0 +1,12 @@
+version: '3.9'
+services:
+  sistema_concrete_java:
+    container_name: sistema_concrete_java_container
+    image: heltonscampos/validadorcpf-concrete
+    ports: 
+      - "3001:8080"
+  sistema_concrete_csharp:
+    container_name: sistema_concrete_csharp_container
+    image: heltonscampos/validadorcpf-dotnet-concrete
+    ports: 
+      - "3002:80"
