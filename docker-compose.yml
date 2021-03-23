@@ -1,8 +1,12 @@
 version: '3.9'
 services:
   sistema_concrete_java:
-    container_name: sistema_concrete_java_container
+    container_name: sistema_concrete_java_container/Dockerfile
     image: heltonscampos/validadorcpf-concrete
+    ###context é para subir um container que já foi buildado em outro dockerfile que está na máquina, em outro projeto(pasta)
+    context: /Users/helton.igor.s.campos/Documents/Gama\ DevOps/validadorcpf/.
+    ##gerando um novo container a partir de um repositório já existente
+    image: heltonscampos/validadorcpf-java-concrete-2
     ports: 
       - "3001:8080"
   sistema_concrete_csharp:
